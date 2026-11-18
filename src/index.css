@@ -1,0 +1,217 @@
+@import "tailwindcss";
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    font-family: 'Tajawal', system-ui, -apple-system, sans-serif;
+  }
+
+  h1, h2, h3, h4, .font-display {
+    font-family: 'Cairo', 'Tajawal', system-ui, sans-serif;
+    text-wrap: balance;
+  }
+}
+
+/* Native Right-to-Left Arabic Mathematical Typesetting */
+.ar-math {
+  direction: rtl;
+  unicode-bidi: isolate;
+  display: inline-flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.24em;
+  font-family: 'Cairo', 'Tajawal', sans-serif;
+  font-weight: 700;
+  color: #0f172a;
+  line-height: 1.5;
+  vertical-align: middle;
+}
+
+.ar-math-block {
+  direction: rtl;
+  unicode-bidi: isolate;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 0.32em;
+  font-family: 'Cairo', 'Tajawal', sans-serif;
+  font-weight: 700;
+  font-size: 1.15rem;
+  color: #0f172a;
+  background-color: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 0.75rem;
+  padding: 0.9rem 1.25rem;
+  line-height: 1.7;
+  overflow-x: auto;
+}
+
+.ar-num {
+  direction: ltr;
+  unicode-bidi: isolate;
+  display: inline-block;
+  font-variant-numeric: tabular-nums;
+}
+
+.ar-neg {
+  direction: rtl;
+  unicode-bidi: isolate;
+  display: inline-flex;
+  align-items: baseline;
+  gap: 0.04em;
+}
+
+.ar-op {
+  display: inline-block;
+  padding-inline: 0.12em;
+  color: #1e3a8a;
+  font-weight: 700;
+}
+
+.ar-var {
+  display: inline-flex;
+  align-items: baseline;
+  color: #0f172a;
+  font-weight: 800;
+}
+
+/* Distinctive Exponent Styling: Different Font (Changa) + Vivid Crimson Color + Smaller Raised Size */
+.ar-exp {
+  font-family: 'Changa', monospace;
+  font-size: 0.68em;
+  font-weight: 700;
+  color: #dc2626;
+  background-color: #fef2f2;
+  border: 1px solid #fecaca;
+  border-radius: 0.28rem;
+  padding: 0.02em 0.28em;
+  line-height: 1.1;
+  transform: translateY(-0.52em);
+  margin-inline-start: 0.08em;
+  display: inline-block;
+  direction: rtl;
+  unicode-bidi: isolate;
+}
+
+.ar-exp-subtle {
+  font-family: 'Changa', monospace;
+  font-size: 0.66em;
+  font-weight: 700;
+  color: #b91c1c;
+  background-color: #fff7ed;
+  border: 1px dashed #fdba74;
+  border-radius: 0.28rem;
+  padding: 0.02em 0.26em;
+  line-height: 1.1;
+  transform: translateY(-0.52em);
+  margin-inline-start: 0.08em;
+  display: inline-block;
+}
+
+.ar-sub {
+  font-family: 'Changa', monospace;
+  font-size: 0.68em;
+  font-weight: 700;
+  color: #0f766e;
+  transform: translateY(0.28em);
+  margin-inline-start: 0.04em;
+  display: inline-block;
+}
+
+/* Vertical Arabic Fraction */
+.ar-frac {
+  direction: rtl;
+  unicode-bidi: isolate;
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  vertical-align: middle;
+  margin-inline: 0.18em;
+  line-height: 1.25;
+}
+
+.ar-frac-num {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.16em;
+  padding: 0.06em 0.45em 0.14em;
+  border-bottom: 1.75px solid #0f172a;
+  font-size: 0.92em;
+  white-space: nowrap;
+}
+
+.ar-frac-den {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.16em;
+  padding: 0.14em 0.45em 0.04em;
+  font-size: 0.92em;
+  white-space: nowrap;
+}
+
+/* Arabic RTL Square Root */
+.ar-root {
+  direction: rtl;
+  unicode-bidi: isolate;
+  display: inline-flex;
+  align-items: stretch;
+  vertical-align: middle;
+  margin-inline: 0.14em;
+}
+
+.ar-root-symbol {
+  font-size: 1.15em;
+  line-height: 1;
+  color: #0f766e;
+  font-weight: 800;
+  display: inline-flex;
+  align-items: center;
+  padding-inline-end: 0.04em;
+}
+
+.ar-root-body {
+  border-top: 2px solid #0f766e;
+  padding: 0.08em 0.34em 0.02em;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.18em;
+}
+
+/* System Brace */
+.ar-system {
+  direction: rtl;
+  unicode-bidi: isolate;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+}
+
+.ar-system-brace {
+  font-size: 2.7rem;
+  font-weight: 400;
+  line-height: 1;
+  color: #1e3a8a;
+  user-select: none;
+}
+
+.ar-system-rows {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  align-items: flex-start;
+}
+
+/* Custom Range Sliders */
+input[type='range'] {
+  accent-color: #1e3a8a;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
